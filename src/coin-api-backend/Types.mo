@@ -35,4 +35,13 @@ module Types {
         http_request : HttpRequestArgs -> async HttpResponsePayload;
     };
 
+    public type CoinList = {
+        #BTC;
+        #ETH;
+        #ICP;
+        #SOL;
+        #BNB;
+        #USDT;
+        #TRY;
+    };
 }
