@@ -22,7 +22,6 @@ Bu fonksiyon içine iki adet parametre alır, bunlar bizim coin listemizdeki ver
     - `Coin_2'` Coin_1 in hangi coine göre ne kadar değeri olduğu
     - Coin_1 in Coin_2 tipinden değerini döndürür
       
-      
     <img width="913" alt="Ekran Resmi 2024-05-24 15 28 58" src="https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/ea032b6f-efbd-4a3b-93a5-5365f31440cc">
 
     - Bu örnekte http isteği yapılarak 1 ICP coin kaç TRY sorgusu yapılmıştır.
@@ -42,3 +41,7 @@ Bu fonksiyon kullanıcıdan alınan bilgilere göre istenilen miktarda coini ist
   - Bu örnekte 120 dolarlık ICP coin sepete ekliyoruz, işlemin Id bilgisi 5 olarak geri döndrülüyor.
 ### read()
 Bu fonksiyon aldığı işlem Id'sine göre o işlemin bilgilerini geri döndürür.
+
+![Ekran Resmi 2024-05-24 16 49 17](https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/e0b5e36f-43e7-4c0a-822f-366a60b8fc40)
+
+
