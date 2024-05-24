@@ -5,7 +5,7 @@ import Text "mo:base/Text";
 import Types "Types";
 import Trie "mo:base/Trie";
 import List "mo:base/List";
-import Float "mo:base/Float";
+import Option "mo:base/Option";
 
 actor {
   let ic : Types.IC = actor ("aaaaa-aa");
@@ -18,13 +18,17 @@ actor {
   };
 
   type Wallet = {
-    total: Nat32;
+    walletNo: Text;
     coin_list: List.List<Coins_cart>;
   };
-  
+
+  var myWallet : Wallet = {
+    walletNo = "aWskL23@#us0?a";
+    coin_list = List.nil<Coins_cart>();
+  };
+
   private stable var next : Id = 0;
   private stable var cart : Trie.Trie<Id, Coins_cart> = Trie.empty();
-
 
   public func get_coin_compare(coin_value_1: Types.CoinList, coin_value_2: Types.CoinList ) : async Text {
     var coin_1 = "ICP";
@@ -81,6 +85,11 @@ actor {
     decoded_text
   };
 
+  public func order() : async Wallet {
+
+    return myWallet;
+  };
+
   public func add_cart(coin_cart: Coins_cart) : async Id {
     let id = next;
     next += 1;
@@ -98,11 +107,34 @@ actor {
     return result;
   };
 
+  public func deleteCart(id: Id) : async Bool{
+    let result = Trie.find(cart, key(id), Nat32.equal);
+    let exists = Option.isSome(result); 
+    if (exists) {
+      cart := Trie.replace(
+        cart,
+        key(id),
+        Nat32.equal,
+        null
+      ).0;
+    };
 
-  // public func order() : async Wallet{
-    
-  // };
+    exists
+  };
 
+  public func updateCart(id: Id, new_product: Coins_cart) : async Bool {
+    let result = Trie.find(cart, key(id), Nat32.equal);
+    let exists = Option.isSome(result);
+    if(exists) {
+      cart := Trie.replace(
+        cart,
+        key(id),
+        Nat32.equal,
+        ?new_product
+      ).0;   
+    };
+    exists
+  };
 
   private func key(x : Id) : Trie.Key<Id> {
     return { hash = x; key = x };
