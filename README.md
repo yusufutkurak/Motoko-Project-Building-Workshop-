@@ -10,7 +10,7 @@ Bu projede şunları öğreneceksiniz:
 - Trie yapısının kullanımı
 ## Fonksiyonlar
 ### get_coin_compare( )
-Bu fonksiyon içine iki adet parametre alır, bunlar bizim coin listemizdeki verilerdir. Bu veri tipleri `Types.mo` dosyasında oluşturulmuştur.
+Bu fonksiyon içine iki adet parametre alır, bunlar bizim coin listemizdeki verilerdir. Bu veri tipleri `Types.mo` dosyasında oluşturulmuştur
 - Kullanıcıdan iki adet veri girişi alır
     - `Coin_1` Miktarı öğrenilmek istenen coin
     - `Coin_2'` Coin_1 in hangi coine göre ne kadar değeri olduğu
@@ -24,11 +24,11 @@ Bu fonksiyon içine iki adet parametre alır, bunlar bizim coin listemizdeki ver
       
     <img width="913" alt="Ekran Resmi 2024-05-24 15 28 58" src="https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/ea032b6f-efbd-4a3b-93a5-5365f31440cc">
 
-    - Bu örnekte http isteği yapılarak 1 ICP coin kaç TRY sorgusu yapılmıştır.
+    - Bu örnekte http isteği yapılarak 1 ICP coin kaç TRY sorgusu yapılmıştır
 
 
 ### add_cart()
-Bu fonksiyon kullanıcıdan alınan bilgilere göre istenilen miktarda coini istenilen coin tipinde sepete eklememizi sağlar.
+Bu fonksiyon kullanıcıdan alınan bilgilere göre istenilen miktarda coini istenilen coin tipinde sepete eklememizi sağlar
 - Kullanıcıdan üç adet veri girişi ister
     - `addCoin` sepete eklenecek coin
     - `purchase_type` sepete eklenecek coinin satın alınacak coin tipi
@@ -38,13 +38,22 @@ Bu fonksiyon kullanıcıdan alınan bilgilere göre istenilen miktarda coini ist
   
   <img width="925" alt="Ekran Resmi 2024-05-24 14 09 25" src="https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/76e42462-ce4b-4c02-852f-5a1e0996ed3a">
  
-  - Bu örnekte 120 dolarlık ICP coin sepete ekliyoruz, işlemin Id bilgisi 5 olarak geri döndrülüyor.
+  - Bu örnekte 120 dolarlık ICP coin sepete ekliyoruz, işlemin Id bilgisi 5 olarak geri döndrülüyor
 ### read()
-Bu fonksiyon aldığı işlem Id'sine göre o işlemin bilgilerini geri döndürür.
+Bu fonksiyon aldığı işlem Id'sine göre o işlemin bilgilerini geri döndürür
 
 ![Ekran Resmi 2024-05-24 16 49 17](https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/e0b5e36f-43e7-4c0a-822f-366a60b8fc40)
 
 ### deleteCart()
-Bu fonksiyon aldığı Id bilgisine göre sepetten ürünü siler.
-- Geriye Bool veri döndürür
+Bu fonksiyon aldığı Id bilgisine göre sepetten ürünü siler, geriye Bool veri döndürür
+![Ekran Resmi 2024-05-24 16 58 14](https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/525387db-6244-4b95-961d-04783183db46)
+
+### updateCart()
+Bu fonksiyon kullanıcıdan alınan Id bilgisine göre sepetteki veriyi yeni girilen veriye göre günceller
+- Kullanıcıdan 4 adet veri girişi ister bunlar, yine add_Cart fonksiyonundakilerle aynı olmak üzere ekstradan değiştirilecek Id bilgisini de kullanıcıdan ister
+- Geriye Bool veri tipi döndürür
+  
+![Ekran Resmi 2024-05-24 17 15 01](https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/cfe3d926-5787-42a1-982c-e182024d21ac)
+
+### key()
 
