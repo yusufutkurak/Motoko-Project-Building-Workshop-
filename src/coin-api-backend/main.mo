@@ -2,10 +2,9 @@ import Blob "mo:base/Blob";
 import Cycles "mo:base/ExperimentalCycles";
 import Nat32 "mo:base/Nat32";
 import Text "mo:base/Text";
-import Types "Types";
 import Trie "mo:base/Trie";
-import List "mo:base/List";
 import Option "mo:base/Option";
+import Types "Types";
 
 actor {
   let ic : Types.IC = actor ("aaaaa-aa");
@@ -17,18 +16,10 @@ actor {
     purchase_amount: Nat32;
   };
 
-  type Wallet = {
-    walletNo: Text;
-    coin_list: List.List<Coins_cart>;
-  };
-
-  var myWallet : Wallet = {
-    walletNo = "aWskL23@#us0?a";
-    coin_list = List.nil<Coins_cart>();
-  };
-
   private stable var next : Id = 0;
   private stable var cart : Trie.Trie<Id, Coins_cart> = Trie.empty();
+  private stable var temp: Trie.Trie<Id, Coins_cart> = Trie.empty();
+  private stable var wallet: Trie.Trie<Id, Coins_cart> = Trie.empty();
 
   public func get_coin_compare(coin_value_1: Types.CoinList, coin_value_2: Types.CoinList ) : async Text {
     var coin_1 = "ICP";
@@ -85,11 +76,6 @@ actor {
     decoded_text
   };
 
-  public func order() : async Wallet {
-
-    return myWallet;
-  };
-
   public func add_cart(coin_cart: Coins_cart) : async Id {
     let id = next;
     next += 1;
@@ -134,6 +120,20 @@ actor {
       ).0;   
     };
     exists
+  };
+
+  public func order() : async (){
+    temp := Trie.clone(cart);
+    wallet := Trie.merge(wallet, temp, Nat32.equal);
+  };
+  
+  public query func read_wallet(id : Id) : async ? Coins_cart {
+    let result = Trie.find(wallet, key(id), Nat32.equal);
+    return result;
+  };
+
+  public func clear_cart() : async (){
+    cart := Trie.empty();
   };
 
   private func key(x : Id) : Trie.Key<Id> {
