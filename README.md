@@ -56,4 +56,19 @@ Bu fonksiyon kullanıcıdan alınan Id bilgisine göre sepetteki veriyi yeni gir
 ![Ekran Resmi 2024-05-24 17 15 01](https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/cfe3d926-5787-42a1-982c-e182024d21ac)
 
 ### key()
+Bu fonksiyon Trie yapımızdaki verileri şifrelemek için kullanılır, key değeri burada üretilir.
+
+
+## Faydalı Bağlantılar
+### `Trie` yapısı için bknz.
+- https://internetcomputer.org/docs/current/motoko/main/base/Trie
+### `Http` istekleri için bknz.
+- https://internetcomputer.org/docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-get
+- https://internetcomputer.org/docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/making-http-requests
+
+
+
+
+
+
 
