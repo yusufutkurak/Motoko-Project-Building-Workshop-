@@ -40,4 +40,5 @@ Bu fonksiyon kullanıcıdan alınan bilgilere göre istenilen miktarda coini ist
   <img width="925" alt="Ekran Resmi 2024-05-24 14 09 25" src="https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/76e42462-ce4b-4c02-852f-5a1e0996ed3a">
  
   - Bu örnekte 120 dolarlık ICP coin sepete ekliyoruz, işlemin Id bilgisi 5 olarak geri döndrülüyor.
-
+### read()
+Bu fonksiyon aldığı işlem Id'sine göre o işlemin bilgilerini geri döndürür.
