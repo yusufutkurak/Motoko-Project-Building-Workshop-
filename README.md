@@ -11,6 +11,25 @@ Bu projede şunları öğreneceksiniz:
 ## Fonksiyonlar
 ### get_coin_compare( )
 Bu fonksiyon içine iki adet parametre alır, bunlar bizim coin listemizdeki verilerdir. Bu veri tipleri `Types.mo` dosyasında oluşturulmuştur.
+- Kullanıcıdan iki adet veri girişi alır
+    - `Coin_1` Miktarı öğrenilmek istenen coin
+    - `Coin_2'` Coin_1 in hangi coine göre ne kadar değeri olduğu
+    - Coin_1 in Coin_2 tipinden değerini döndürür
+- `http_request` http isteğimiz için gerekli parametreleri tutan değişken tipidir
+- `http_response` http isteğinin geri dönüş değerini tutan değişkenimizdir
+- Geriye sepete eklenen işlemin Id bilgisini döndürür
+    - `Coin_1` Miktarı öğrenilmek istenen coin
+    - `Coin_2'` Coin_1 in hangi coine göre ne kadar değeri olduğu
+    - Coin_1 in Coin_2 tipinden değerini döndürür
+      
+      
+    <img width="913" alt="Ekran Resmi 2024-05-24 15 28 58" src="https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/ea032b6f-efbd-4a3b-93a5-5365f31440cc">
+
+    - Bu örnekte http isteği yapılarak 1 ICP coin kaç TRY sorgusu yapılmıştır.
+
+
+### add_cart()
+Bu fonksiyon kullanıcıdan alınan bilgilere göre istenilen miktarda coini istenilen coin tipinde sepete eklememizi sağlar.
 - Kullanıcıdan üç adet veri girişi ister
     - `addCoin` sepete eklenecek coin
     - `purchase_type` sepete eklenecek coinin satın alınacak coin tipi
