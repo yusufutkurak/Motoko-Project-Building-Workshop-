@@ -8,6 +8,24 @@ Bu projede şunları öğreneceksiniz:
 - Gelen sonuçları işleme
 - Veri tiplerini ayarlama
 - Trie yapısının kullanımı
+
+## Kurulum
+### Windows
+- Windows için ilk önce powershell uygulamasını yönetici olarak çalıştırıyoruz
+- Sonra terminala aşağıdaki kodları yapıştırıp çalıştırmamız gerekli
+- wsl --install
+- Burada wsl yüklendikten sonra bilgisayarın yeniden başlatılması gerekebilir
+- wsl --install -d Ubuntu-22.04
+- sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+- Burada yilk seçeneği seçerek standart kurulum ile devam edebiliriz
+<img width="293" alt="Ekran Resmi 2024-05-25 10 32 54" src="https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/d688fd81-035e-47bf-b3f7-d339e815b2e0">
+
+### MacOS - Linux
+- MacOS ve  Linux için kurlum çok daha basit
+- sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+- Bu komutu çalıştırmamız yeterli, ilk seçeneği seçerek standart kurlum yapabilirsiniz
+
+
 ## Fonksiyonlar
 ### get_coin_compare( )
 Bu fonksiyon içine iki adet parametre alır, bunlar bizim coin listemizdeki verilerdir. Bu veri tipleri `Types.mo` dosyasında oluşturulmuştur
