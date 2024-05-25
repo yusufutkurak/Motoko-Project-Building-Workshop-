@@ -25,7 +25,27 @@ Bu projede şunları öğreneceksiniz:
 - sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 - Bu komutu çalıştırmamız yeterli, ilk seçeneği seçerek standart kurlum yapabilirsiniz
 
+## Proje oluşturma
+- Öncelikle projemizi oluşturmak istediğimiz dosya dizinine girmemiz gerekli
+- Bunun için terminale aşağıdaki kodu yapıştırıp masaüstüne girebilirsiniz
+- cd Desktop
+- Sonrasında ise yeni proje oluşturmak için bir kod daha yazmamız yeterli
+- dfx new project_name
+- Projemiz oluşturulurken bize 3 adet seçenek sunacaktır
+- Burada ilk kısımda backand kısmını geliştireceğimiz programlama dilini seçmemiz gerekiyor (Bu proje için Motoko seçmemiz yeterli)
+  
+<img width="478" alt="Ekran Resmi 2024-05-25 10 37 46" src="https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/da528e14-c594-44f0-9e1a-2224ba27ff54">
 
+
+- İkinci seçenekte frontend kısmı için hangi framework ve programlama dilini kullanacağımızı seçmemiz gerekiyor
+  
+<img width="491" alt="Ekran Resmi 2024-05-25 10 37 58" src="https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/5936504b-42c3-4e1d-aa5b-7edf8bb4715d">
+
+- Üçücü seçenekte Internet Identity seçmemiz yeterli olacaktır
+
+<img width="407" alt="Ekran Resmi 2024-05-25 10 38 08" src="https://github.com/yusufutkurak/Motoko-Project-Building-Workshop-/assets/107929430/498471bc-bd44-4fa7-bc07-2e4ea54a92fc">
+
+- Sonrasında Vscode veya hangi derleyiciyi kullanıyorsanız main.mo dosyasına girip kodlarınızı yazmaya başlayabilirsiniz.
 ## Fonksiyonlar
 ### get_coin_compare( )
 Bu fonksiyon içine iki adet parametre alır, bunlar bizim coin listemizdeki verilerdir. Bu veri tipleri `Types.mo` dosyasında oluşturulmuştur
