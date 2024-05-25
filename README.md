@@ -128,7 +128,12 @@ Bu fonksiyon Trie yapımızdaki verileri şifrelemek için kullanılır, key de�
 ### `Http` istekleri için bknz.
 - https://internetcomputer.org/docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-get
 - https://internetcomputer.org/docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/making-http-requests
-
+### Veri tipleri
+- https://internetcomputer.org/docs/current/motoko/main/base/Blob
+- https://internetcomputer.org/docs/current/motoko/main/base/Nat
+- https://internetcomputer.org/docs/current/motoko/main/base/Text
+### Cycles
+-https://internetcomputer.org/docs/current/motoko/main/canister-maintenance/cycles
 
 
 
